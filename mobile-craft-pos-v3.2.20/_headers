@@ -1,0 +1,24 @@
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; worker-src 'self'; manifest-src 'self'; connect-src 'self' https://ppqbgdvryhawxgxzzqnt.supabase.co https://mobile-craft-r2-backup.adilpkd690.workers.dev http://127.0.0.1:17845; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'
+  Permissions-Policy: camera=(self), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), loopback-network=(self), local-network=()
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+  Strict-Transport-Security: max-age=31536000
+/
+  Cache-Control: no-store
+/index.html
+  Cache-Control: no-store
+/404.html
+  Cache-Control: no-store
+/service-worker.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+/src/*
+  Cache-Control: no-cache
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

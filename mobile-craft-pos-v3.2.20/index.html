@@ -1,0 +1,21 @@
+<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f7fc"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><link rel="icon" type="image/svg+xml" href="/brand.svg"><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/pwa/icon-192.png"><title>Mobile Craft POS · Online</title><link rel="stylesheet" href="/src/styles.css"><link rel="stylesheet" href="/src/pos/pos.css"><link rel="stylesheet" href="/src/pos/scanner.css"><link rel="stylesheet" href="/src/cloud/business.css"><link rel="stylesheet" href="/src/cloud/cloud.css"><link rel="stylesheet" href="/src/cloud/inventory/inventory.css"><script src="/vendor/pako.min.js"></script><style>
+#mc-boot-screen{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 22px;text-align:center;background:#f6f7fb;color:#1d1b2e;font-family:Inter,Arial,sans-serif}
+#mc-boot-screen .mc-boot-mark{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:linear-gradient(145deg,#9271ff,#683de5);color:#fff;font-size:19px;font-weight:850;letter-spacing:-1px;box-shadow:0 8px 24px #7250ec30}
+#mc-boot-screen .mc-boot-kicker{margin:19px 0 8px;color:#6446d9;font-size:10px;font-weight:800;letter-spacing:.16em}
+#mc-boot-screen h1{font-size:25px;line-height:1.2;letter-spacing:-.04em;margin:0}
+#mc-boot-screen .mc-boot-copy{max-width:34ch;margin:10px 0 18px;color:#65677c;font-size:13px;line-height:1.55}
+#mc-boot-screen .mc-boot-spinner{width:22px;height:22px;border:2px solid #e3ddfb;border-top-color:#7050e8;border-radius:50%;animation:mc-boot-spin .8s linear infinite}
+#mc-boot-screen .mc-boot-error{max-width:420px;margin-top:12px;padding:10px 12px;border:1px solid #e5e7f0;border-radius:9px;background:#fff;color:#4a4a5f;font-size:12px;line-height:1.5}
+#mc-boot-screen .mc-boot-retry{margin-top:14px;min-height:42px;padding:0 18px;border:0;border-radius:8px;background:#7050e8;color:#fff;font-weight:700;font-size:13px}
+@keyframes mc-boot-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#mc-boot-screen .mc-boot-spinner{animation:none}}
+</style>
+</head><body><div id="root">
+<main id="mc-boot-screen" role="status" aria-live="polite">
+  <div class="mc-boot-mark" aria-hidden="true">MC</div>
+  <p class="mc-boot-kicker">MOBILE CRAFT POS</p>
+  <h1>Opening your shop…</h1>
+  <p class="mc-boot-copy">Loading your secure workspace. This normally takes a few seconds.</p>
+  <span class="mc-boot-spinner" aria-hidden="true"></span>
+</main>
+</div><script src="/sw-update.js"></script><script type="module" src="/src/bootstrap.js"></script></body></html>
