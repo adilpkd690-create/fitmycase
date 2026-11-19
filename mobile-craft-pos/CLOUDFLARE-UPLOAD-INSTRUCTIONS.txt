@@ -1,0 +1,8 @@
+1. Upload this ZIP as a Production deployment to the existing Cloudflare Pages project: billing-software.
+2. Upload the ZIP contents at the deployment root; do not nest the parent folder. Do not create a new Pages project.
+3. This release corrects service-worker precache and update activation. After deployment, open the existing POS tab once; the new service worker will install and claim the page, then the update hook reloads the app once.
+4. If an already-open Android PWA window stays open, close it and reopen https://billing-software-0kq.pages.dev.
+5. Check Workspace/Settings for release 3.2.4.
+6. Test Products / Items → Details → Barcode label → Download PDF or Share to 4BarCode. First use one copy and your sticker's exact width/height in mm.
+
+No Supabase SQL migration is required. Do not clear browser data or delete app storage. Do not clear any POS business data.

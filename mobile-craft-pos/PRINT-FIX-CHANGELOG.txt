@@ -1,0 +1,13 @@
+MOBILE CRAFT POS v3.2.3 — BARCODE PDF EXPORT
+
+Android Chrome's native window.print() path can open an empty print tab on some devices when a native modal dialog is active. The cloud barcode-label flow no longer depends on browser print preview.
+
+Changes:
+- Barcode label generation now creates a real PDF with one page per physical label.
+- Label width and height are configurable in millimetres and embedded as the PDF page size.
+- Copies-per-SKU and optional selling price are supported.
+- Download PDF and Android Share Sheet actions are available.
+- The PDF can be shared/opened in 4BarCode and printed with its PDF Print / batch PDF workflow.
+- Product barcodes/SKUs are not changed by label export. No stock is changed.
+
+No database migration is required. This is a frontend-only update.

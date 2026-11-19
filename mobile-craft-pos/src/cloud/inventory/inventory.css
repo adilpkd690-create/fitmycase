@@ -1,0 +1,51 @@
+/* Inventory uses the existing Mobile Craft tokens, controls and shop workspace. */
+.inv-side{max-height:calc(100dvh - 24px);overflow:auto;scrollbar-width:thin}
+.inv-show-nav.button{display:none}
+.inv-panel{min-width:0;width:100%}
+.inv-panel .cloud-panel-head{align-items:flex-start;flex-wrap:wrap}
+.inv-panel .cloud-panel-head>div:first-child{flex:1 1 230px}
+.inv-panel .cloud-panel-head .cloud-tools{margin-left:auto}
+.inv-panel>.biz-presets{margin:12px 0 8px}
+.inv-panel .cloud-op-form,label.inv-flex{min-width:0}
+.inv-flex{flex:1 1 150px}
+.inv-picker{display:grid;gap:8px;min-width:0}
+.inv-picker select{width:100%;min-width:0}
+.inv-picker .cloud-input-action{align-items:flex-end;flex-wrap:wrap}
+.inv-picker .cloud-input-action>.button{margin-bottom:1px}
+.inv-picker .cloud-input-action label{max-width:100%}
+.inv-check{display:flex!important;align-items:center;gap:8px;width:max-content;max-width:100%;font-size:12px}
+.inv-check input[type=checkbox],.inv-table input[type=checkbox]{width:17px;height:17px;min-height:0!important;accent-color:var(--primary);flex:0 0 17px}
+.inv-label-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:9px;margin:10px 0}
+.inv-label{background:#fff;color:#1b1828;border:1px solid #dcd8ea;border-radius:6px;text-align:center;padding:8px 6px;min-width:0;display:grid;gap:3px;justify-items:center;align-content:center;break-inside:avoid;overflow-wrap:anywhere}
+.inv-label small{font-size:11px;color:#423c54}
+.inv-label .pos-barcode{max-width:100%;height:auto;background:#fff}
+.inv-label .pos-barcode text{font-size:12px}
+.inv-item-hero{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.inv-item-hero>div:last-child{flex:1 1 185px;min-width:0}
+.inv-item-hero p,.inv-facts dd{overflow-wrap:anywhere}
+.inv-image-box{width:100px;height:100px;flex:0 0 100px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--border);color:var(--muted);background:var(--surface-alt);border-radius:10px}
+.inv-image-box img{display:block;object-fit:contain;width:100%;height:100%;background:#fff}
+.inv-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px 12px;margin:0}
+.inv-facts>div{min-width:0;border-bottom:1px solid var(--border);padding:8px 0}
+.inv-facts dt{font-size:11px;color:var(--muted);font-weight:700}
+.inv-facts dd{font-size:12px;margin:4px 0 0;color:var(--text)}
+.inv-metric{text-align:start;cursor:pointer;font-family:inherit}
+.inv-metric:hover,.inv-metric:focus-visible{border-color:var(--accent-border);background:var(--accent-bg)}
+.inv-metric span{display:flex;align-items:center;gap:6px}
+.inv-metric span>svg{flex:0 0 auto;color:var(--accent)}
+.inv-metric-arrow{margin-left:auto}
+.inv-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+.inv-narrow{max-width:450px}
+.inv-subhead{margin:13px 0 4px;display:flex;align-items:center;gap:6px;font-size:14px;color:var(--text)}
+.inv-asof{display:inline-block;margin:4px 0 6px;color:var(--muted)}
+.inv-action{display:grid;gap:4px;justify-items:start}
+.inv-action small{color:var(--muted)}
+.inv-report-tabs{margin:10px 0 7px}
+.inv-pos-location{margin:8px 0 10px}
+.inv-scroll .pos-link{white-space:normal;text-align:start;overflow-wrap:anywhere}
+.inv-status-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.inv-inset{padding:8px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border)}
+@media(max-width:1050px){.inv-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.inv-side{max-height:none;overflow:visible}.inv-mobile-collapsed{display:none}.inv-show-nav.button{display:flex;width:100%;margin-top:5px;justify-content:center}.inv-side .cloud-side-item{min-height:39px;overflow-wrap:anywhere}.inv-side .cloud-side-item svg{width:14px}.inv-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:390px){.inv-facts{grid-template-columns:minmax(0,1fr)}.inv-panel .cloud-panel-head .cloud-tools{margin-left:0}}
+@media print{body[data-pos-print=label] article.inv-print-sheet{display:block;max-width:none;width:100%}.inv-print-sheet .inv-label-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm}.inv-print-sheet .inv-label{font-size:9pt;border-radius:0;padding:2mm}.inv-print-sheet .inv-label small{font-size:8pt}}

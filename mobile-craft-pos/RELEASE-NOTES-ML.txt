@@ -1,0 +1,18 @@
+MOBILE CRAFT POS v3.2.4
+SERVICE WORKER UPDATE FIX
+
+v3.2.3-ലെ service-worker.js precache list-ൽ Cloudflare Pages configuration-only files ആയ /_headers, /_redirects ചേർന്നിരുന്നു. ഇവ public URL-ൽ ലഭ്യമല്ലാത്തതിനാൽ രണ്ടും 404 ആണ്. cache.addAll() ഒരു request എങ്കിലും fail ചെയ്താൽ പുതിയ Service Worker മുഴുവൻ install പരാജയപ്പെടും. അപ്പോൾ പഴയ worker പഴയ Catalogue.js cache-ൽ നിന്ന് തന്നെ നൽകും. അതുകൊണ്ടാണ് പുതിയ Barcode Label PDF workflow deploy ചെയ്തിട്ടും പഴയ blank print page വീണ്ടും കാണാൻ ഇടയായത്.
+
+v3.2.4-ൽ:
+1. /_headers, /_redirects precache list-ൽ നിന്ന് നീക്കി.
+2. Service Worker cache version പുതുക്കി.
+3. Precache വിജയിച്ചശേഷം മാത്രമേ പുതിയ worker activate ചെയ്യൂ.
+4. പഴയ partial cache install failure വന്നാൽ delete ചെയ്യുന്നു.
+5. പുതിയ worker tab-നെ control ചെയ്യുമ്പോൾ പഴയ app സ്വയം reload ചെയ്യും.
+6. App release marker 3.2.4 ആയി തിരുത്തി.
+
+Barcode label workflow:
+Products / Items → Details → Barcode label → Download PDF അല്ലെങ്കിൽ Share to 4BarCode.
+PDF-ൽ label width/height mm നൽകുക. ആദ്യം Copies = 1 ഉപയോഗിച്ച് ഒരു sample print മാത്രം ചെയ്യുക.
+
+ഈ release Service Worker update ആണ്. Supabase SQL migration ആവശ്യമില്ല. Existing products, stock, sales, users, settings ഒന്നും മാറ്റുന്നില്ല.

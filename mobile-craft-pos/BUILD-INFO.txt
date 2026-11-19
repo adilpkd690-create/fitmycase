@@ -1,0 +1,9 @@
+Mobile Craft POS v3.2.4 Cloudflare production release
+
+Release contents: v3.2.3 barcode-label PDF workflow plus a corrected service-worker rollout.
+Fix: Removed Cloudflare Pages configuration-only paths /_headers and /_redirects from the service-worker precache list. Those URLs return 404 by design and previously caused cache.addAll() to reject the entire worker installation. The worker now uses a new cache version, activates only after a successful precache, and the app reloads once a new worker takes control.
+
+Included: full inventory menus, session persistence, warranty fields and invoice snapshots, receipt PDF/share modules, guarded Test Mode controls, direct barcode-label PDF export for Android / 4BarCode, Mobile Craft logo.
+
+Supabase project: ppqbgdvryhawxgxzzqnt.supabase.co
+No Supabase service-role key is included. No database migration is required for this frontend release.
